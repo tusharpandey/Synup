@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Ërror"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/crust"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                />
+
+            <TextView
+                android:id="@+id/sauce"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:scrollbars="vertical"/>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".05"
+                android:background="@android:color/darker_gray"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:scrollbars="vertical"/>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".05"
+                android:background="@android:color/darker_gray"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+</FrameLayout>
